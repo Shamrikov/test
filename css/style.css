@@ -1,0 +1,591 @@
+/* 
+-----------------------------------------------------
+  Stylesheet Guide
+-----------------------------------------------------
+  
+  1. Default stylesheets
+
+    1.1. Color Schemes
+  
+  2. General classes
+  
+  3. Main
+
+    3.1 Offsets
+
+  4. Basic Elements
+
+    4.1. Typography
+    4.2. Lists
+    4.3. Buttons
+    4.4. Forms
+    4.5. Tables
+    4.6. Tooltips
+    4.7. Dividers
+
+  5. Widgets and Shortcodes
+
+  6. Header
+
+    6.1. Logo
+    6.2. Main Navigation
+
+  7. Footer
+
+*/
+@import "reset.css";
+@import "animate.css";
+@import "../fonts/font-awesome-4.7.0/css/font-awesome.min.css";
+
+/* ------------------------------------------------
+
+    1. Default stylesheets
+
+------------------------------------------------ */
+
+  html,body{
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Oswald', sans-serif;
+    color:#787575;
+    font-size:14px;
+    line-height:22px;
+    background:#f1f1f1;
+    -webkit-text-size-adjust: none;
+  }
+
+  *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  ::selection{
+    color: #fff;
+    background-color: #22cfef;
+  }
+
+  ::-moz-selection{
+    color: #fff;
+    background-color: #22cfef;
+  }
+
+  ::-webkit-scrollbar{
+    background: #cdcdcd;  
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb{background: #333131;}
+
+
+  ::-webkit-input-placeholder{
+    color:#505050;
+    -webkit-transition: text-indent .5s ease, color .5s ease;
+            transition: text-indent .5s ease, color .5s ease;
+  }
+
+  input::-moz-placeholder{
+    color:#505050;
+    opacity:1;
+  }
+
+  textarea::-moz-placeholder{
+    color: #505050;
+    opacity: 1;
+  }
+
+  ::ms-input-placeholder{
+    color:#505050;
+  }
+
+  [placeholder]:focus::-webkit-input-placeholder{
+    text-indent:10em;
+    color:transparent;
+  }
+
+  .container{
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  /* --------------------------------------------
+        1.1. Color Schemes
+  -------------------------------------------- */
+    
+      
+
+/* ------------------------------------------------
+
+    2. General Classes
+
+------------------------------------------------ */
+
+  .align_left{
+    text-align: left;
+  }
+
+  .align_right{
+    text-align: right;
+  }
+
+  .align_center{
+    text-align: center;
+  }
+
+  .alignleft{
+    float: left;
+  }
+
+  .alignright{
+    float: right;
+  }
+
+  .wrapper{overflow: hidden;}
+
+  .hide{ display: none;}
+
+  .show{ display: block;}
+
+  .d_ib{display: inline-block;}
+
+  .transparent{ opacity:0; }
+
+  .invisible{ 
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .visible{ 
+    opacity:1; 
+    visibility: visible;
+  }
+
+  .p_abs{position: absolute;}
+
+  .p_rel{position: relative;}
+
+  .p_fix{position: fixed;}
+
+  .clear {clear:both;width:100%;line-height:0;font-size:0;}
+
+  .clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .reg {text-transform:uppercase}
+
+/* ------------------------------------------------
+
+    3. Main
+
+------------------------------------------------ */
+  
+  #content {
+    display: block;
+    padding:0px 0px 0px 0px;
+    height: 2000px;
+  }
+
+  .page_wrap{
+    position: relative;
+    min-height: 100%;
+  }
+
+  .back_to_top{
+    border: none;
+    outline: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  .back_to_top:hover{
+    background-color: #e25050;
+  }
+
+  .back_to_top i{
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+  }
+  /* --------------------------------------------
+        3.1. Offsets
+  -------------------------------------------- */
+    
+    .section_offset{
+       padding: 55px 0;
+    }
+
+/* ------------------------------------------------
+
+    4. Basic Elements
+
+------------------------------------------------ */
+  
+  /* --------------------------------------------
+        4.1. Typography
+  -------------------------------------------- */
+  
+    h1,h2,h3,h4,h5,h6{
+      font-family: 'Roboto', sans-serif;
+      font-weight:normal;
+      line-height: 1.23em;
+      color: #333333;
+      margin: 0;
+      margin-bottom: 0px;
+    }
+
+    h1{font-size: 38px;}
+    h2{font-size: 30px;}
+    h3{font-size: 22px;}
+    h4{font-size: 18px;}
+    h5{font-size: 16px;}
+    h6{font-size: 14px;}
+
+    p:not(:last-child){margin-bottom: 20px;}
+
+    mark{background-color: #20cfef;padding: 0 2px;color: #fff;}
+    mark.red{background-color: #ee352f;}
+
+    a{
+      color: #;
+      text-decoration: none;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+    a:hover{
+      color: #333;
+      text-decoration: none;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    a:focus,
+    a:visited{
+      text-decoration: none;
+    }
+
+  /* --------------------------------------------
+        4.2. Lists
+  -------------------------------------------- */
+      
+    .list1{}
+    
+    .list1 li{
+      background:url(../images/marker1.png) 0 7px no-repeat;
+      padding-left:20px;
+    }
+
+    .list1 li a{}
+
+  /* --------------------------------------------
+        4.3. Buttons
+  -------------------------------------------- */
+    
+    button{
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+    
+    button:hover{
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    .btn{
+      display: inline-block;
+      outline: none;
+      background: #;
+      color: #;
+    }
+
+    .btn:hover{
+      background-color: #;
+      color: #;
+    }
+
+  /* --------------------------------------------
+        4.4. Forms
+  -------------------------------------------- */
+
+  /* --------------------------------------------
+        4.5. Tables
+  -------------------------------------------- */
+
+  /* --------------------------------------------
+        4.6. Tooltips
+  -------------------------------------------- */
+
+  /* --------------------------------------------
+        4.7. Dividers
+  -------------------------------------------- */
+
+/* ------------------------------------------------
+
+    5. Widgets and Shortcodes
+
+------------------------------------------------ */
+
+/* ------------------------------------------------
+
+    6. Header
+
+------------------------------------------------ */
+   
+  #header{
+    background-color: #202020;
+    padding: 34px 0;
+    color: #fff;
+  }
+
+
+  #header.sticky{
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+  }
+
+  #header .container{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+
+  /* --------------------------------------------
+        6.1. Logo
+  -------------------------------------------- */
+
+    .logo{}
+
+    .logo a{
+      display:block;
+      width:139px;
+      height:19px;
+      background:url(../images/logo.png) 0 0 no-repeat;
+      text-decoration:none;
+      text-indent:-9999px;
+    }
+
+  /* --------------------------------------------
+        6.2. Main Navigation
+  -------------------------------------------- */
+
+    
+    .nav_mob_btn{
+      background: none;
+      outline: none;
+      border: none;
+      color: #fff;
+      height: 20px;
+      width: 20px;
+      padding: 0;
+      font-size: 20px;
+      display: none;
+    }
+
+    .nav_mob_btn>.fa-times{display: none;}
+    .open_menu .nav_mob_btn>.fa-times{display: block;}
+    .open_menu .nav_mob_btn>.fa-bars{display: none;}
+
+    .navigation{
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      -ms-align-items: center;
+      align-items: center;
+    }
+
+    .navigation>li:not(:first-child){
+      padding-left: 24px;
+    }
+
+    .navigation>li>a{
+      display: block;
+      font-size: 14px;
+      line-height: 23px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 5px 14px;
+      color: #fff;
+    }
+
+    .navigation>li>a:hover{
+      color: #e25050;
+    }
+
+    .navigation>li.current>a,
+    .navigation>li.current>a:hover,
+    .navigation>li.current>span{
+      cursor: default;
+      background-color: #e25050;
+      color: #fff;
+    }
+
+/* ------------------------------------------------
+
+    7. Footer
+
+------------------------------------------------ */
+
+  #footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+
+
+/* ------------------------------------------------
+
+    7. Content
+
+------------------------------------------------ */
+    
+    .item_container{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      -o-flex-direction: column;
+      flex-direction: column;
+      -ms-align-items: center;
+      align-items: center;
+      -webkit-justify-content: flex-end;
+      -moz-justify-content: flex-end;
+      -ms-justify-content: flex-end;
+      -o-justify-content: flex-end;
+      justify-content: flex-end;
+      padding-bottom: 200px;
+    }
+
+    .item_container:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .item_box_wrapp{
+      position: relative;
+    }
+
+    .item_box{
+      position: absolute;
+      width: 700px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 15px;
+      height: 300px;
+      -webkit-box-shadow: 0px -3px 15px rgba(0,0,0,0.3);
+      box-shadow: 0px -3px 15px rgba(0,0,0,0.3);
+      -webkit-transform-origin: 50% 0;
+      -moz-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+      -o-transform-origin: 50% 0;
+      transform-origin: 50% 0;
+      -webkit-transition: transform 0.5s;
+      -o-transition: transform 0.5s;
+      transition: transform 0.5s;
+      left: 50%;
+      margin-left: -350px;
+      : ;
+    }
+
+    .item_box_close{
+      border: none;
+      outline: none;
+      width: 30px;
+      height: 30px;
+      top: -10px;
+      right: -10px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: #fff;
+      -webkit-box-shadow: 2px 4px 15px rgba(0,0,0,0.3);
+      box-shadow: 2px 4px 15px rgba(0,0,0,0.3);
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .item_box_header{
+      padding: 10px 15px;
+      font-size: 20px;
+    }
+
+
+    .progressBar_box svg path {
+      will-change: auto;
+      stroke-width: 10px;
+      stroke-miterlimit: round;
+      transition: stroke-dashoffset 850ms ease-in-out;
+    }
+
+    .progressBar_box{
+      position: absolute;
+      bottom: 20px;
+      width: 700px;
+      background-color: #ffffff;
+      padding: 10px 100px;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      -ms-align-items: center;
+      align-items: center;
+    }
+    .cls-1 {
+      font-size: 16px;
+      fill: #000000;
+    }
+
+    .progressBar_box svg{
+      margin-right: 20px;
+    }

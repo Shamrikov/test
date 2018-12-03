@@ -1,0 +1,71 @@
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+
+@media only screen and (max-width: 1199px){
+	
+	.container{
+		width: 950px;
+	}
+	
+}
+
+@media only screen and (max-width: 991px){
+	
+	body{min-width:768px;}
+
+	.container{
+		width: 750px;
+	}
+	
+}
+
+@media only screen and (max-width: 767px) {
+ 	body{min-width:420px;}
+
+	.container{
+		width: auto;
+	}
+
+	#header{
+		padding: 15px 0;
+	}
+	
+ 	.nav_mob_btn{
+ 		display: block;
+ 		position: relative;
+ 		z-index: 99;
+ 	}
+ 	.nav_mob_btn>.fa-times{display: none;}
+ 	.navigation{
+ 		padding-top: 55px;
+ 		position: fixed;
+ 		top: 0;
+ 		left: 0;
+ 		right: 0;
+ 		bottom: 0;
+ 		background: #202020;
+ 		display: block;
+ 		width: 100%;
+ 		text-align: center;
+ 		-webkit-transform: translateX(-100%);
+ 		-ms-transform: translateX(100%);
+ 		-o-transform: translateX(100%);
+ 		transform: translateX(100%);
+ 		-webkit-transition: all 0.3s;
+ 		-o-transition: all 0.3s;
+ 		transition: all 0.3s;
+ 	}
+
+ 	.open_menu .navigation{
+ 		-webkit-transform: translateX(0);
+ 		-ms-transform: translateX(0);
+ 		-o-transform: translateX(0);
+ 		transform: translateX(0);
+ 	}
+ 	.navigation>li{
+ 		padding-left: 0 !important;
+ 	}
+}
+
+@media only screen and (max-width: 479px){
+ 	body{min-width:300px;}
+}
